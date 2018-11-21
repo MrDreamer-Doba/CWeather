@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="exit">Exit</string>
+    <string name="warning_no_connection">No Internet connection</string>
+</resources>

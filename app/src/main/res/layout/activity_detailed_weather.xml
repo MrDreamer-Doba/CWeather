@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorSkyBlue"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36dp"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            tools:text="LVIV, UA" />
+
+        <TextView
+            android:id="@+id/tv_sync_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_city"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            tools:text="Last update: 9 Nov 2018 22:32:12" />
+
+        <ImageView
+            android:id="@+id/ic_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_sync_time"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tv_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_weather"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="46dp"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            tools:text="21 °C" />
+
+        <TextView
+            android:id="@+id/tv_weather_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_humidity"
+            android:layout_centerHorizontal="true"
+            android:textSize="26sp"
+            tools:text="Broken Clouds" />
+
+        <TextView
+            android:id="@+id/tv_humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_sun_rise_set"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="4dp"
+            android:textSize="26sp"
+            tools:text="Humidity: 64%" />
+
+        <TextView
+            android:id="@+id/tv_sun_rise_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="46dp"
+            tools:text="07:43 / 19:23"
+            android:textSize="26sp" />
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
