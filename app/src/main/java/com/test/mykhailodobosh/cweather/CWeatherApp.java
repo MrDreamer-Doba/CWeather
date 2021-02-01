@@ -10,29 +10,29 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class CWeatherApp extends Application {
 
-    private static Context sContext;
-    private static IWeatherApi sWeatherApi;
-    private Retrofit mRetrofit;
+    private static Context context;
+    private static IWeatherApi weatherApi;
+    private Retrofit retrofit;
 
     @Override
     public void onCreate() {
         super.onCreate();
 
-        sContext = getApplicationContext();
+        context = getApplicationContext();
 
-        mRetrofit = new Retrofit.Builder()
+        retrofit = new Retrofit.Builder()
                 .baseUrl("https://api.weatherbit.io/v2.0/current/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        sWeatherApi = mRetrofit.create(IWeatherApi.class);
+        weatherApi = retrofit.create(IWeatherApi.class);
     }
 
     public static Context getAppContext() {
-        return sContext;
+        return context;
     }
 
     public static IWeatherApi getWeatherApi() {
-        return sWeatherApi;
+        return weatherApi;
     }
 }
